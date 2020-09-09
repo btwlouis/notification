@@ -17,5 +17,3 @@ TriggerEvent('notifications', "#f1f1f1", "Awesome title", "Awesome message")
 ```
 
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
