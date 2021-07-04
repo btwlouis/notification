@@ -12,34 +12,21 @@ body {
 }
 
 .notification {
-  margin-bottom: 1vh;
-  position: absolute;
-  top: 2vh;
-  left: 2vh;
+  margin: 1rem 0 1rem 1rem;
   background-color: rgb(53, 53, 53, 0.8);
-  max-width: 22vh;
-  min-width: 22vh;
-  min-height: 6vh;
-  max-height: 6vh;
+  width: 22vh;
+  height: auto;
   word-wrap: break-word;
-  padding: 0.8vh;
-  border-left: 5px #00d5ff solid;
-
-  -webkit-box-shadow: 11px 10px 58px -22px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 11px 10px 58px -22px rgba(0, 0, 0, 0.75);
+  padding: 1rem;
   box-shadow: 11px 10px 58px -22px rgba(0, 0, 0, 0.75);
 }
 
-.notification-title {
+.notification-title p {
   text-transform: uppercase;
-  padding: 5px 0 0 10px;
+  font-size: 12px;
 }
 
-.notification-message {
-  padding-left: 10px;
-  font-size: 1.4vh;
-}
-
-p {
+#message {
   color: #ffffff;
+  font-size: 16px;
 }
