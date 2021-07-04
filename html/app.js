@@ -1,18 +1,23 @@
-$(function () {
-  window.onload = (e) => {
-    window.addEventListener("message", (event) => {
-      var item = event.data;
-      if (item !== undefined && item.type === "custom") {
-        document.getElementById("notifications").innerHTML +=
-          '<div class="notification" style="border-left: 5px ' +
-          item.color +
-          ' solid;"><div class="notification-title"><p id="notfication-title-content">' +
-          item.title +
-          '</p></div><div class="notification-message"><p id="notfication-message-content">' +
-          item.message +
-          "</p></div></div>";
-        $(".notification").delay(5000).fadeOut("slow");
-      }
-    });
-  };
+window.addEventListener("message", (event) => {
+  var item = event.data;
+  if (item !== undefined && item.type === "custom") {
+    const content = $(
+      `
+      <div class="notification" style="border-left: 5px ` + item.color + ` solid;">
+        <div class="notification-title">
+          <p style="color: ` + item.color + `">Test` + item.title + `</p>
+        </div>
+        <p id="message">
+          ` + item.message + `
+        </p>
+      </div>
+      `
+    )
+
+    $("#notifications").prepend(content);
+
+    setTimeout(() => {
+      content.remove();
+    }, 5000)
+  }
 });
