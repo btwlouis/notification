@@ -5,7 +5,7 @@ window.addEventListener("message", (event) => {
       `
       <div class="notification" style="border-left: 5px ` + item.color + ` solid;">
         <div class="notification-title">
-          <p style="color: ` + item.color + `">Test` + item.title + `</p>
+          <p style="color: ` + item.color + `">` + item.title + `</p>
         </div>
         <p id="message">
           ` + item.message + `
